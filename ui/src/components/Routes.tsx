@@ -22,7 +22,8 @@ import {
   MenuItem,
   CircularProgress,
   Alert,
-  Snackbar
+  Snackbar,
+  SelectChangeEvent
 } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import { getGatewayRoutes, getHttpRouteTemplates, applyGatewayConfiguration, validateYaml } from '../services/api';
@@ -129,7 +130,7 @@ spec:
     }
   };
 
-  const handleTemplateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleTemplateChange = (event: SelectChangeEvent) => {
     const templateName = event.target.value;
     if (templateName === '') {
       setRouteConfig('');

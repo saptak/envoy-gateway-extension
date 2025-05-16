@@ -11,7 +11,8 @@ import {
   InputLabel,
   Select,
   MenuItem,
-  CircularProgress
+  CircularProgress,
+  SelectChangeEvent
 } from '@mui/material';
 import { validateYaml, applyGatewayConfiguration, getGatewayTemplates } from '../services/api';
 import { ConfigTemplate } from '../services/types';
@@ -37,7 +38,7 @@ function Configuration() {
     setConfig(event.target.value);
   };
 
-  const handleTemplateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleTemplateChange = (event: SelectChangeEvent) => {
     const templateName = event.target.value;
     if (templateName === '') {
       setConfig('');

@@ -16,7 +16,8 @@ import {
   Select,
   MenuItem,
   Button,
-  Alert
+  Alert,
+  SelectChangeEvent
 } from '@mui/material';
 import RefreshIcon from '@mui/icons-material/Refresh';
 
@@ -93,11 +94,11 @@ function Monitoring() {
     }, 1000);
   };
 
-  const handleTimeRangeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleTimeRangeChange = (event: SelectChangeEvent) => {
     setTimeRange(event.target.value);
   };
 
-  const handleLogLevelChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleLogLevelChange = (event: SelectChangeEvent) => {
     setLogLevel(event.target.value);
     
     // Filter logs based on selected level
