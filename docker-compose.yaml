@@ -1,0 +1,18 @@
+name: envoy-gateway-extension
+version: '3.9'
+
+services:
+  desktop-extension-envoy-gateway:
+    image: ${DESKTOP_PLUGIN_IMAGE}
+    build:
+      context: ./ui
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  envoy-gateway-backend:
+    image: ${DESKTOP_PLUGIN_BACKEND_IMAGE}
+    build:
+      context: ./backend
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - $HOME/.kube:/root/.kube:ro

@@ -1,0 +1,35 @@
+{
+  "name": "envoy-gateway-extension",
+  "title": "Envoy Gateway",
+  "description": "Manage Envoy Gateway directly from Docker Desktop",
+  "vendor": "Envoy Gateway",
+  "icon": "assets/icon.svg",
+  "ui": {
+    "dashboard-tab": {
+      "title": "Envoy Gateway",
+      "root": "/ui",
+      "src": "index.html"
+    }
+  },
+  "host": {
+    "binaries": [
+      {
+        "darwin": [
+          {
+            "path": "/usr/local/bin/kubectl"
+          }
+        ],
+        "windows": [
+          {
+            "path": "C:\\Program Files\\Docker\\Docker\\resources\\bin\\kubectl.exe"
+          }
+        ],
+        "linux": [
+          {
+            "path": "/usr/bin/kubectl"
+          }
+        ]
+      }
+    ]
+  }
+}

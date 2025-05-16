@@ -1,0 +1,13 @@
+{
+  "name": "saptak/envoy-gateway-extension",
+  "title": "Envoy Gateway",
+  "description": "Manage Envoy Gateway directly from Docker Desktop",
+  "vendor": "Saptak Sen",
+  "ui": {
+    "dashboard-tab": {
+      "title": "Envoy Gateway",
+      "root": "/ui",
+      "src": "index.html"
+    }
+  }
+}
