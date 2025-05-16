@@ -93,18 +93,18 @@ function Monitoring() {
     }, 1000);
   };
 
-  const handleTimeRangeChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setTimeRange(event.target.value as string);
+  const handleTimeRangeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTimeRange(event.target.value);
   };
 
-  const handleLogLevelChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setLogLevel(event.target.value as string);
+  const handleLogLevelChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setLogLevel(event.target.value);
     
     // Filter logs based on selected level
     if (event.target.value === 'all') {
       setLogs(mockLogs);
     } else {
-      setLogs(mockLogs.filter(log => log.level === (event.target.value as string).toUpperCase()));
+      setLogs(mockLogs.filter(log => log.level === (event.target.value).toUpperCase()));
     }
   };
 

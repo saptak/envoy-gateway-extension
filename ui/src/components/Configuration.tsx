@@ -37,8 +37,8 @@ function Configuration() {
     setConfig(event.target.value);
   };
 
-  const handleTemplateChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    const templateName = event.target.value as string;
+  const handleTemplateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const templateName = event.target.value;
     if (templateName === '') {
       setConfig('');
       return;
